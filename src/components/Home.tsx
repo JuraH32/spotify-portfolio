@@ -7,7 +7,7 @@ const Home = ({playlists}: {playlists: Playlist[]}) => {
     const navigate = useNavigate();
 
     return (
-        <div className="flex flex-col bg-spotify-gray rounded-md mt-2 mx-auto items-center justify-center scroll-auto">
+        <div className="flex flex-col bg-spotify-gray rounded-md mt-2 mx-auto items-center justify-center mt-14">
             <h1 className="text-white text-3xl font-bold mb-4">Made For You</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {playlists.map((playlist: Playlist, index: number) => {

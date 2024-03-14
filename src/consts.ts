@@ -54,7 +54,7 @@ const PravaVrecica = {
             "failed upload attempts by more than 80%",
             "Awarded the Rector’s Award and was in the final of Lumen Development competition"
         ],
-        tags: [tags.Flutter, tags.Dart, tags.ML, tags.AI, tags.Git, tags.GitHub]
+        tags: [tags.Flutter, tags.ML, tags.Python, tags.Git, tags.GitHub, tags.Dart, tags.Android, tags.AI]
     },
     imageUrl: publicURL("/images/V_logo_s.png"),
     artist: "Team of 3",
@@ -70,7 +70,8 @@ const StickEmAll = {
             "Created an iOS app using Swift as a part of a 2-person team which enables managing and\n" +
             "tracking of stickers and simplifying the exchange process using QR codes\n",
             "Built decoding and encoding of album data into a QR code, compressing the data by up to 93.5%"
-        ]
+        ],
+        tags: [tags.iOS, tags.Swift, tags.Git, tags.GitHub],
     },
     artist: "Team of 2",
     github: "https://github.com/JuraH32/StickEmAll",
@@ -89,6 +90,7 @@ const AIIzbori = {
             'We created a web platform "Pametni Izbor" to educate the public about the elections and' +
             'gather user predictions for the upcoming elections with over 100 visitors',
         ],
+        tags: [tags.Python, tags.Pytorch, tags.AWS, tags.Git, tags.GitLab, tags.ML],
     },
     artist: "Team of 5",
     imageUrl: publicURL("/images/pametni_izbor.png"),
@@ -96,15 +98,32 @@ const AIIzbori = {
     lengthEnd: "Ongoing",
 }
 
+const Portfolio = {
+    name: "Portfolio",
+    description: {
+        bulletPoints: [
+            "Designed and developed a personal portfolio website using React, TypeScript, and Tailwind CSS" +
+            "inspired by Spotify's design",
+            "Deployed the website on GitHub Pages",
+        ],
+        tags: [tags.React, tags.TypeScript, tags["Tailwind CSS"], tags.Git, tags.GitHub],
+    },
+    artist: "Me",
+    imageUrl: "https://via.placeholder.com/300",
+    lengthStart: "Feb 2023",
+    lengthEnd: "Ongoing",
+    github: ""
+}
+
 const PersonalProjects = {
-    name: "Personal projects",
+    name: "Projects",
     description: "Description 1",
     songs: [
         PravaVrecica,
         StickEmAll,
         AIIzbori,
-    ],
-    imageUrl: "https://via.placeholder.com/300"
+        Portfolio
+    ]
 }
 
 //Professional Experience
@@ -119,7 +138,8 @@ const Croz = {
             "Implemented data scraping from multiple websites which gathered details of over 100 different\n" +
             "funding opportunities, as well as developed a user alert system based on website updates which\n" +
             "combined saves users more than 4 hours a week"
-        ]
+        ],
+        tags: [tags.Java, tags["Spring Boot"], tags.React, tags.TypeScript, tags.Git, tags.GitLab, tags.Agile]
     },
     imageUrl: publicURL("/images/croz.png"),
     artist: "Croz Ltd",
@@ -128,11 +148,49 @@ const Croz = {
     location: "Zagreb"
 }
 
+const ZRS = {
+    name: "Programming lecturer and Mentor",
+    description: {
+        bulletPoints: [
+            "Lead mentor for 5th grade students for competitive programming in Python, C++, and FMS Logo with\n" +
+            "emphasis on algorithms, data structures, and programming basics\n",
+            "Mentored kids with top 3 placements in the National Programming Competition and a student\n" +
+            "participating in the Junior Croatian Informatics Olympiad with 2nd best score for the age group"
+        ],
+        tags: [tags.Python, tags["C++"], tags.Education, tags.FMSLogo,]
+    },
+    imageUrl: publicURL("/images/zrs.jpeg"),
+    artist: "ZRS",
+    lengthStart: "Sep 2021",
+    lengthEnd: "Present",
+    location: "Zagreb"
+}
+
+const ReversingLabs = {
+    name: "Software Engineer Intern",
+    description: {
+        bulletPoints: [
+            "Maintain and improve existing secure software products as part of an agile team, using Django\n" +
+            "(Python), React (JavaScript), and Go on Linux\n",
+            "Expanded API-s and implemented dynamically created documentation on over 20% of endpoints\n",
+            "Designed a system for enabling and disabling features which shortened development time by 5%"
+        ],
+        tags: [tags.Python, tags.Django, tags.React, tags.JavaScript, tags.Go, tags.Linux, tags.Agile]
+    },
+    imageUrl: publicURL("/images/RL.jpeg"),
+    artist: "ReversingLabs Ltd",
+    lengthStart: "Dec 2022",
+    lengthEnd: "Present",
+    location: "Zagreb"
+}
+
 const ProfessionalExperience = {
     name: "Professional Experience",
     description: "Description 2",
     songs: [
         Croz,
+        ZRS,
+        ReversingLabs
     ]
 }
 

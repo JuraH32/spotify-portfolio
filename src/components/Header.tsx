@@ -1,9 +1,9 @@
 import React from "react";
 import HistoryNavigation from "./HistoryNavigation";
 
-const Header = () => {
+const Header = ({opacity}: {opacity: number}) => {
     return (
-        <div className="flex flex-row items-center justify-between p-4 bg-gray-900 rounded-t-md z-10">
+        <div className={`fixed flex r-0 w-full flex-row items-center justify-between p-4 bg-gray-900 rounded-t-md z-10`} style={{backgroundColor: `rgba(12, 12, 12, ${opacity}%)`}}>
             <HistoryNavigation/>
             <div className="flex flex-row items-center">
                 <p className="text-white mr-4">Username</p>

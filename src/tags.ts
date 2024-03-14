@@ -67,5 +67,80 @@ export const tags = {
         text: "GitLab",
         color: "#FCA326",
     },
-
+    Swift: {
+        text: "Swift",
+        color: "#FA7343",
+    },
+    iOS: {
+        text: "iOS",
+        color: "#007AFF",
+    },
+    Android: {
+        text: "Android",
+        color: "#A4C639",
+    },
+    Java: {
+        text: "Java",
+        color: "#007396",
+    },
+    Kotlin: {
+        text: "Kotlin",
+        color: "#0095D5",
+    },
+    "C++": {
+        text: "C++",
+        color: "#00599C",
+    },
+    App: {
+        text: "App",
+        color: "#000000",
+    },
+    Pytorch: {
+        text: "Pytorch",
+        color: "#EE4C2C",
+    },
+    "Data Science": {
+        text: "Data Science",
+        color: "#F37726",
+    },
+    AWS: {
+        text: "AWS",
+        color: "#232F3E",
+    },
+    Azure: {
+        text: "Azure",
+        color: "#0078D4",
+    },
+    FastAPI: {
+        text: "FastAPI",
+        color: "#009688",
+    },
+    "Spring Boot": {
+        text: "Spring Boot",
+        color: "#6DB33F",
+    },
+    Agile: {
+        text: "Agile",
+        color: "#000000",
+    },
+    FMSLogo: {
+        text: "FMSLogo",
+        color: "#E09F3E",
+    },
+    Mentoring: {
+        text: "Mentoring",
+        color: "#000000",
+    },
+    Education: {
+        text: "Education",
+        color: "#FFD700",
+    },
+    Linux: {
+        text: "Linux",
+        color: "#FCC624",
+    },
+    Go: {
+        text: "Go",
+        color: "#00ADD8",
+    },
 }

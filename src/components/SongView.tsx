@@ -1,25 +1,8 @@
+// SongView.tsx
 import React, {useEffect, useState} from "react";
 import {Song, TagType} from "../types";
 import DescriptionView from "./Description";
 import Tag from "./Tag";
-import {tagColors} from "../consts";
-
-const pickRandomColors = (colors: string[], numberOfColors: number, seed: string = ""): string[] => {
-    let pickedColors: string[] = [];
-    let usedColors: string[] = [];
-    for (let i = 0; i < numberOfColors; i++) {
-        const possibilities = colors.filter(color => !usedColors.includes(color));
-        const color = possibilities[Math.floor(Math.random() * possibilities.length)];
-        pickedColors.push(color);
-        usedColors.push(color);
-
-        if (usedColors.length === colors.length) {
-            usedColors = [];
-        }
-    }
-
-    return pickedColors;
-}
 
 const SongView = ({song}: { song: Song }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +10,6 @@ const SongView = ({song}: { song: Song }) => {
 
     useEffect(() => {
         if (song.description.tags) {
-            // only first 3 tags
             const showedTags = song.description.tags.slice(0, 3);
             setTags(showedTags);
         } else {
@@ -39,8 +21,6 @@ const SongView = ({song}: { song: Song }) => {
         setIsOpen(!isOpen);
     };
 
-
-
     return (
         <button key={song.name}
                 className={`flex flex-col w-full hover:bg-spotify-gray-lightest items-center p-2 rounded-lg ${isOpen ? 'expanded' : ''}`}
@@ -49,10 +29,10 @@ const SongView = ({song}: { song: Song }) => {
                 <img
                     src={song.imageUrl}
                     alt="Song Cover"
-                    className="w-16 h-16 mr-4 rounded-md"
+                    className="w-10 h-10 mr-4 rounded-md"
                 />
                 <div className="flex flex-row items-center justify-between w-full">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col w-1/3">
                         <div className="flex flex-row items-center">
                             <h3 className="text-lg font-semibold text-white text-left">{song.name}</h3>
                             {song.github && (
@@ -68,12 +48,12 @@ const SongView = ({song}: { song: Song }) => {
                         </div>
                         <p className="text-white text-left">{song.artist}</p>
                     </div>
-                    <div className="flex flex-row items-center flex-wrap space-x-2">
+                    <div className="flex flex-row items-center justify-start flex-wrap space-x-2 w-1/3">
                         {tags.map((tag, index) => (
                             <Tag tag={tag} key={index}/>
                         ))}
                     </div>
-                    <p className="text-white">{song.location && `${song.location}, `} {song.lengthStart && `${song.lengthStart} - ${song.lengthEnd}`}</p>
+                    <p className="text-white w-1/3 text-right">{song.location && `${song.location}, `} {song.lengthStart && `${song.lengthStart} - ${song.lengthEnd}`}</p>
                 </div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

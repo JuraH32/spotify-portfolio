@@ -33,4 +33,5 @@ export type User = {
 export type TagType = {
     text: string;
     color: string;
+    help?: string;
 }

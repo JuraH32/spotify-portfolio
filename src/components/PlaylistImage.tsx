@@ -32,25 +32,17 @@ const PlaylistImage = ({playlist}: { playlist: Playlist }) => {
             grid.push(row);
         }
     }
-    if (numImages === 1) {
-        return (
-            <div className="flex flex-col">
-                {grid[0][0]}
-            </div>
-        )
-    } else {
-        return (
-            <div className="grid grid-cols-2 grid-rows-2 gap-0 w-full h-full">
-                {grid.map((row, i) => (
-                    row.map((image, j) => (
-                        <div className="flex flex-col" key={j}>
-                            {image}
-                        </div>
-                    ))
-                ))}
-            </div>
-        )
-    }
+    return (
+        <div className={numImages === 1 ? "flex flex-col" : "grid grid-cols-2 grid-rows-2 gap-0 w-full h-full"}>
+            {grid.map((row, i) => (
+                row.map((image, j) => (
+                    <div key={j}>
+                        {image}
+                    </div>
+                ))
+            ))}
+        </div>
+    )
 }
 
 export default PlaylistImage;

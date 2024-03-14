@@ -13,7 +13,7 @@ const ForwardBackwardsButton = ({flip}: {flip: boolean}) => {
     }
 
     return (
-        <button className="bg-spotify-gray p-2 rounded-full h-4/6 aspect-square h-8" onClick={flip ? navigateBack : navigateForward}>
+        <button className="bg-black p-2 rounded-full h-4/6 aspect-square h-8" onClick={flip ? navigateBack : navigateForward}>
             <img
                 src={`${process.env.PUBLIC_URL}/images/forward.svg`}
                 alt={flip ? "Backwards" : "Forward"}
