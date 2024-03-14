@@ -5,7 +5,6 @@ import PlaylistImage from "./PlaylistImage";
 const PlaylistCard = (
     {playlist, onClick}: { playlist: Playlist, onClick: () => void}
 ) => {
-    const imageUrl = "https://via.placeholder.com/300";
     const title = playlist.name;
     const description = playlist.description;
 

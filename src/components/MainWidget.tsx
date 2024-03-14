@@ -14,9 +14,14 @@ const MainWidget = (
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
+        const mainWidgetElement = mainWidgetRef.current;
+
+        if (!mainWidgetElement) {
+            return;
+        }
         const handleScroll = () => {
             // @ts-ignore
-            const currentScrollPos = mainWidgetRef.current.scrollTop;
+            const currentScrollPos = mainWidgetElement.scrollTop;
             // @ts-ignore
             const startFade = window.innerHeight * 0.1;
             const scrollUntilOpaque = window.innerHeight * 0.2;
@@ -25,9 +30,9 @@ const MainWidget = (
         };
 
         // @ts-ignore
-        mainWidgetRef.current.addEventListener("scroll", handleScroll);
+        mainWidgetElement.addEventListener("scroll", handleScroll);
         // @ts-ignore
-        return () => mainWidgetRef.current.removeEventListener("scroll", handleScroll);
+        return () => mainWidgetElement.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (

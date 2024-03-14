@@ -269,13 +269,6 @@ const mockSong5 = {
     artist: "Artist 5"
 };
 
-const mockSong6 = {
-    name: "Song 6",
-    description: mockDescription3,
-    imageUrl: "https://via.placeholder.com/300",
-    artist: "Artist 6"
-};
-
 const mockSong7 = {
     name: "Song 7",
     description: mockDescription2,

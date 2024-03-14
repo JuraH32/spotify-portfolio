@@ -7,7 +7,7 @@ import {mockPlaylists} from "./consts";
 import {BrowserRouter as Router} from "react-router-dom";
 
 function App() {
-    const [playlists, setPlaylists] = React.useState(mockPlaylists);
+    const [playlists, ] = React.useState(mockPlaylists);
     return (
         <Router>
             <div className="App relative flex flex-col h-screen bg-black">
