@@ -1,0 +1,5 @@
+.expanded {
+  padding-top: 20px; /* Adjust as needed */
+  padding-bottom: 20px; /* Adjust as needed */
+  transition: padding-top 0.3s ease, padding-bottom 0.3s ease;
+}

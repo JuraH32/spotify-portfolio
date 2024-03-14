@@ -5,7 +5,7 @@ const SongDetails = () => {
         <div className="flex flex-row items-center">
             <img
                 id="album-cover"
-                src="/path/to/album-cover.jpg"
+                src="https://via.placeholder.com/300"
                 alt="Album Cover"
                 className="w-12 h-12 mr-4"
             />

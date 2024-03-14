@@ -15,10 +15,11 @@
     "react-scripts": "5.0.1",
     "tailwind": "^4.0.0",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react-router-dom": "^6.22.2"
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/index.css -o ./dist/style.css && postcss ./dist/style.css -o ./dist/style.css && react-scripts build",
+    "build": "tailwindcss -i src/style/index.css -o ./dist/style.css && postcss ./dist/style.css -o ./dist/style.css && react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

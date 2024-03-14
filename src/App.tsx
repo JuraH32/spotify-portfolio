@@ -1,29 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
 import NowPlayingBar from "./components/now_playing/NowPlayingBar";
-import YourLibrary from "./components/YourLibrary";
 import Navigation from "./components/Navigation";
 import MainWidget from "./components/MainWidget";
+import {mockPlaylists} from "./consts";
+import {BrowserRouter as Router} from "react-router-dom";
 
 function App() {
-  return (
-      <>
-          <div className="App min-h-screen flex flex-col bg-black">
-              <div className="flex-grow flex flex-row">
-                  <div className="w-1/5 m-2 mb-0 flex flex-col">
-                      <Navigation/>
-                      <YourLibrary/>
-                  </div>
-                  <MainWidget/>
-              </div>
-              <footer>
-                  <NowPlayingBar/>
-              </footer>
-          </div>
-
-      </>
-  );
+    const [playlists, setPlaylists] = React.useState(mockPlaylists);
+    return (
+        <Router>
+            <div className="App relative flex flex-col h-screen bg-black">
+                {/* Main content area */}
+                <div className="flex flex-row flex-grow overflow-y-auto">
+                    {/* Left panel - Navigation */}
+                    <Navigation playlists={playlists}/>
+                    {/* Right panel - MainWidget */}
+                    <MainWidget playlists={playlists}/>
+                </div>
+                {/* Footer */}
+                <footer className="bg-gray-200 h-1/12 rounded-md z-20">
+                    <NowPlayingBar/>
+                </footer>
+            </div>
+        </Router>
+    );
 }
+
 
 export default App;

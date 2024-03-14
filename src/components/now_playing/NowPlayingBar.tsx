@@ -4,7 +4,7 @@ import PlayControls from "./PlayControls";
 
 const NowPlayingBar = () => {
     return (
-        <div className="bg-black p-4 flex items-center justify-between h-1/12 rounded-md">
+        <div className="w-full bg-black p-4 flex items-center justify-between h-full">
             <SongDetails/>
             <PlayControls/>
             <div className="flex items-center">
