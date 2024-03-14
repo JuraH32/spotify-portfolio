@@ -194,16 +194,52 @@ const ProfessionalExperience = {
     ]
 }
 
-const mockSong2 = {
-    name: "Song 2",
-    description: mockDescription2,
-    lengthStart: "Dec 2023",
-    lengthEnd: "Dec 2024",
+//Education
+const MIOC = {
+    name: "MIOC",
+    description: {
+        bulletPoints: [
+            "Graduated from the Mathematical Gymnasium in Zagreb, the most prestigious high school in Croatia\n",
+            "During high school, I participated in National competition in 3 different subject and won 3rd" +
+            "place in the National competition in Informatics",
+
+        ],
+    },
     imageUrl: "https://via.placeholder.com/300",
-    artist: "Artist 2",
-    github: "https://github.com",
-    location: "Location 2"
-};
+    artist: "MIOC",
+    lengthStart: "Sep 2017",
+    lengthEnd: "Jun 2021",
+    location: "Zagreb"
+
+}
+
+const FER = {
+    name: "FER",
+    description: {
+        bulletPoints: [
+            "Currently studying at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia\n",
+            "Expected to graduate in 2026 with a Master's degree in Computer Science",
+            "Relevant Courses: Algorithms and Data Structures, Object-Oriented Programming, Web Development, " +
+            "Database Systems, Operating Systems, Software Engineering, Competitive Programming, " +
+            "Service and application development for iOS"
+        ],
+    },
+    imageUrl: "https://via.placeholder.com/300",
+    artist: "FER",
+    lengthStart: "Sep 2021",
+    lengthEnd: "Present",
+    location: "Zagreb"
+
+}
+
+const Education = {
+    name: "Education",
+    description: "Description 3",
+    songs: [
+        MIOC,
+        FER
+    ]
+}
 
 const mockSong3 = {
     name: "Song 3",
@@ -250,21 +286,11 @@ const mockSong7 = {
 export const mockPlaylists: Playlist[] = [
     PersonalProjects,
     ProfessionalExperience,
-    {
-        name: "Playlist 3",
-        description: "Description 3",
-        songs: [
-            mockSong2,
-            mockSong6,
-            mockSong7
-        ],
-        imageUrl: "https://via.placeholder.com/300"
-    },
+    Education,
     {
         name: "Playlist 4",
         description: "Description 4",
         songs: [
-            mockSong2,
             mockSong3,
             mockSong4,
             mockSong5
