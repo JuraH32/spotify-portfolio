@@ -11,8 +11,8 @@ const Header = () => {
 
     // useEffect check if window.location.pathname changes
     useEffect(() => {
-        console.log(window.location.pathname);
         setHomeIcon(window.location.pathname === '/' ? <HomeIconFilled/> : <HomeIcon/>);
+        // eslint-disable-next-line
     }, [window.location.pathname]);
 
     return <div className="bg-black text-white flex items-center justify-between px-4">
@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
             <NavigationButton className="p-2 bg-gray-800 rounded-full" icon={<img
                 src={publicURL("/images/user-image.jpg")}
-                alt="User Image"
+                alt="User"
                 className="w-8 h-8 rounded-full object-cover"
             />} onClick={() => {
             }}/>
