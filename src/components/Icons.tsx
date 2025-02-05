@@ -8,6 +8,14 @@ export const HomeIcon = () => (
     </svg>
 )
 
+export const HomeIconFilled = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48" fill="white">
+        <path d="M23.951 4a1.5 1.5 0 00-.879.322L8.86 15.52A6.99 6.99 0 006 21.41V40.5A2.5 2.5 0 008.5 43h10a2.5 2.5 0 002.5-2.5V30.5a.5.5 0 01.5-.5h5a.5.5 0 01.5.5V40.5A2.5 2.5 0 0029.5 43h10a2.5 2.5 0 002.5-2.5V21.41a6.99 6.99 0 00-2.86-5.89L24.927 4.322A1.5 1.5 0 0023.951 4z" />
+    </svg>
+);
+
+
+
 export const SearchIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30" stroke="white"
          fill="white">

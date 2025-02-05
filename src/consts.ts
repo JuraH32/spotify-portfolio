@@ -1,7 +1,7 @@
 import {Playlist} from "./types";
 import {tags} from "./tags";
 
-const publicURL = (url: string) => process.env.PUBLIC_URL + url;
+export const publicURL = (url: string) => process.env.PUBLIC_URL + url;
 
 export const tagColors = [
   '#F94144', // Red

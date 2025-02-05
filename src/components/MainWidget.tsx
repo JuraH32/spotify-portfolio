@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import Header from "./Header";
+import WidgetHeader from "./WidgetHeader";
 import {Route, Routes} from "react-router-dom";
 import {Playlist} from "../types";
 import Home from "./Home";
@@ -36,8 +36,8 @@ const MainWidget = (
     }, []);
 
     return (
-        <div ref={mainWidgetRef} className="rounded-md mt-2 mr-2 grow w-4/5 overflow-y-auto bar z-20">
-            <Header opacity={opacity}/>
+        <div ref={mainWidgetRef} className="rounded-md mr-2 grow w-4/5 overflow-y-auto bar z-20">
+            <WidgetHeader opacity={opacity}/>
             <div className="flex flex-col w-full grow bg-spotify-gray rounded-md rounded-t-none p-5 z-0 h-full">
                 <Routes>
                     <Route path="/" element={<Home playlists={playlists}/>}/>

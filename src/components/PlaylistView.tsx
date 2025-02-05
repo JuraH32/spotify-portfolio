@@ -38,7 +38,7 @@ const PlaylistView = ({playlists}: { playlists: Playlist[] }) => {
             </div>
             <div>
                 {playlist.songs.map((song) => (
-                    <SongView song={song}/>
+                    <SongView song={song} key={song.name}/>
                 ))}
             </div>
         </div>
